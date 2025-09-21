@@ -1,0 +1,6 @@
+DATABASE_URL=sqlite://database.db
+JWT_SECRET=your-super-secret-jwt-key-here
+WECHAT_APPID=your-wechat-appid
+WECHAT_APPSECRET=your-wechat-appsecret
+PORT=3000
+NODE_ENV=development
