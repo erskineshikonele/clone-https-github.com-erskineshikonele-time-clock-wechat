@@ -1,0 +1,61 @@
+#!/bin/bash
+# setup.sh - Run this after cloning
+
+echo "Setting up Time Clock WeChat Mini Program..."
+
+# Copy mini program files (you'll need to create these files with the code above)
+echo "📱 Creating Mini Program files..."
+# Add your file creation commands here
+
+# Setup backend
+echo "🔧 Setting up backend..."
+cd backend
+npm init -y
+npm install express cors helmet jsonwebtoken bcryptjs knex pg sqlite3 multer nodemailer winston
+npm install --save-dev nodemon jest supertest eslint
+
+# Create .env.example
+cat > .env.example << 'EOF'
+# Database
+DATABASE_URL=postgresql://user:pass@localhost:5432/timeclock
+DB_CONNECTION=sqlite
+
+# JWT
+JWT_SECRET=your-super-secret-jwt-key-here
+
+# WeChat
+WECHAT_APPID=wxd1234567890abcdef
+WECHAT_APPSECRET=your-wechat-app-secret
+
+# Email
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASS=your-app-password
+
+# Server
+PORT=3000
+NODE_ENV=development
+EOF
+
+cd ..
+
+# Setup tests
+echo "🧪 Setting up tests..."
+cd tests
+npm init -y
+npm install --save-dev jest supertest
+
+cd ..
+
+# Commit everything
+git add .
+git commit -m "Complete setup: Mini Program + Backend + Tests"
+git push origin main
+
+echo "✅ Setup complete! Your Time Clock WeChat Mini Program is ready!"
+echo "📖 Next steps:"
+echo "1. Get WeChat AppID from https://mp.weixin.qq.com"
+echo "2. Update appid in mini-program/project.config.json"
+echo "3. Open mini-program/ in WeChat Developer Tools"
+echo "4. Test on your phone via Preview QR code"
