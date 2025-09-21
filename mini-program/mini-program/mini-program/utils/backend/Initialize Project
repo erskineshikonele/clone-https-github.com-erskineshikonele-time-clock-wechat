@@ -1,0 +1,12 @@
+# Create all directories
+mkdir -p mini-program/{pages/{index,timesheet,profile,admin},components/{clock-button,time-card},utils,images}
+mkdir -p backend/{routes,middleware,models,config}
+mkdir -p docs tests/e2e .github/workflows
+
+# Initialize git (if not already cloned)
+git init
+git add .
+git commit -m "Initial commit: Time Clock WeChat Mini Program"
+git branch -M main
+git remote add origin https://github.com/yourusername/time-clock-wechat.git
+git push -u origin main
