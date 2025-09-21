@@ -1,0 +1,56 @@
+{
+  "appid": "your-appid-here",
+  "compileType": "miniprogram",
+  "libVersion": "2.28.3",
+  "projectname": "TimeClock Pro",
+  "scripts": {},
+  "setting": {
+    "compileHotReLoad": true,
+    "es6": true,
+    "minifyWXSS": true,
+    "packNpmManually": true,
+    "packNpmRelationList": [],
+    "postcss": true,
+    "showShadowRootInWxmlPanel": true,
+    "urlCheck": true,
+    "uploadType": "reBuild",
+    "useCompilerModule": true,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "useEntryScriptModule": true,
+    "useIsolateContext": true,
+    "useMultiPageProcess": true,
+    "useStaticServer": true,
+    "useTemplateSyntaxTransform": true
+  },
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": -1,
+      "list": []
+    }
+  },
+  "description": "Time Clocking System for WeChat",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "miniprogramRoot": "./",
+  "qcloudRoot": "",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "cloudfunctionGenerators": {}
+}
