@@ -1,0 +1,40 @@
+{
+  "name": "time-clock-api",
+  "version": "1.0.0",
+  "description": "Backend API for Time Clocking WeChat Mini Program",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint . --ext .js",
+    "db:migrate": "knex migrate:latest",
+    "db:seed": "knex seed:run"
+  },
+  "keywords": ["wechat", "timeclock", "hr", "attendance"],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "knex": "^2.4.2",
+    "pg": "^8.11.3",
+    "sqlite3": "^5.1.6",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.4",
+    "winston": "^3.10.0",
+    "rate-limiter-flexible": "^2.4.1",
+    "express-rate-limit": "^6.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "jest": "^29.6.2",
+    "supertest": "^6.3.3",
+    "eslint": "^8.50.0",
+    "@typescript-eslint/parser": "^6.9.0"
+  }
+}
